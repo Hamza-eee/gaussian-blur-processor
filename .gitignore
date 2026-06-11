@@ -19,3 +19,7 @@ transcript
 # Compiled files
 *.vo
 *.vt
+
+# Verilator generated
+obj_dir/
+waves.vcd
