@@ -117,13 +117,13 @@ Synthesised in Quartus and run on a DE1-SoC board, using the provided clock divi
 
 ## Build & Run
 
-**Requirements:** a SystemVerilog simulator (ModelSim or Verilator) and, for synthesis, Intel Quartus Prime.
+**Requirements:** a SystemVerilog simulator (ModelSim or Verilator + Surfer wave viewer) and, for synthesis, Intel Quartus Prime.
 
 ```bash
 make run      # simulate with ModelSim (terminal)
 make gui      # simulate with ModelSim (waveform viewer)
 make vsim     # simulate with Verilator
-make vwave    # Verilator + open waveform in GTKWave
+make vwave    # Verilator + open waveform in Surfer
 make clean    # remove generated files
 ```
 

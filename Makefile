@@ -52,8 +52,8 @@ vwave: vsim
 		echo "Error: '$(WAVFILE)' not found."; \
 		exit 1; \
 	fi
-	@echo "== Opening GTKWave =="
-	gtkwave $(WAVFILE) &
+	@echo "== Opening Surfer =="
+	surfer $(WAVFILE) &
 
 # ---- Clean ----
 clean:
