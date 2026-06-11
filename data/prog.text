@@ -1,0 +1,18 @@
+//Control Word [op:SelA:selB[1:0]:dataImm[5:0]]
+//                //Type	//Destination   <= selA operand + selB operand       
+0101000000	      // IN	    //waveAddr_reg  <= waveAddr_reg + swImm
+1000100000	      // MUL	//ps_reg        <= waveSample   x 0x20 (K0)
+0010000000	      // ACC	//acc_reg       <= acc_reg      + ps_reg
+0100000001	      // STP	//waveAddr_reg  <= waveAddr_reg + 0x01
+1000011010	      // MUL	//ps_reg        <= waveSample   x 0x1A (K1)
+0010000000	      // ACC	//acc_reg       <= acc_reg      + ps_reg
+0100000001	      // STP	//waveAddr_reg  <= waveAddr_reg + 0x01
+1000001110	      // MUL	//ps_reg        <= waveSample   x 0x0E (K2)
+0010000000	      // ACC	//acc_reg       <= acc_reg      + ps_reg
+0100111100	      // STP	//waveAddr_reg  <= waveAddr_reg + 0x3C (-4, extends to 0xFC)
+1000001110	      // MUL	//ps_reg        <= waveSample   x 0x0E (K2)
+0010000000	      // ACC	//acc_reg       <= acc_reg      + ps_reg
+0100000001	      // STP	//waveAddr_reg  <= waveAddr_reg + 0x01
+1000011010	      // MUL	//ps_reg        <= waveSample   x 0x1A (K1)
+0010000000	      // ACC	//acc_reg       <= acc_reg      + ps_reg
+0100000000	      // STP(NOP)//waveAddr_reg <= waveAddr_reg + 0x00
