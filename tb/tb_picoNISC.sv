@@ -90,7 +90,7 @@ module tb_picoNISC;
         SW[9] = 1'b1;
         #4ns;
         // Running test over all samples (except upper and lower 2 edge samples)
-        for (int i = 0  ; i<252; i++ ) begin
+        for (int i = 2; i < 254; i++) begin
             run_check(8'(i));
         end
         $display("---------------------------");
